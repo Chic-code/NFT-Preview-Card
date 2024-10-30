@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: hsl(215, 51%, 70%);
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  width: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 20px;
+  color: hsl(215, 51%, 70%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: 0.3s;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 248, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-image:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay img {
+  width: 40px;
+  height: 40px;
+}
+
+.card-content h1 {
+  font-size: 1.5em;
+  color: hsl(0, 0%, 100%);
+  margin-top: 20px;
+}
+
+.card-content p {
+  font-size: 1em;
+  color: hsl(215, 51%, 70%);
+  margin: 10px 0 20px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.price span {
+  color: #33DAE8;
+  font-weight: 600;
+}
+
+.price, .time {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.price svg, .time svg {
+  margin-right: 5px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  color: hsl(215, 51%, 70%);
+  border-top: 1px solid hsl(215, 32%, 27%);
+  padding-top: 20px;
+}
+
+.author img {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.author span {
+  color: white;
+  font-weight: 600;
+}
