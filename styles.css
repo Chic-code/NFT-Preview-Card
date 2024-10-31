@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap");
 
 * {
   padding: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   background-color: hsl(217, 54%, 11%);
   display: flex;
   justify-content: center;
@@ -51,6 +51,19 @@ body {
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.card-image:hover .image-overlay,
+.card-image:active .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay img {
+  width: 40px;
+  height: 40px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
 }
 
 .card-image:hover .image-overlay {
@@ -82,17 +95,19 @@ body {
 }
 
 .price span {
-  color: #33DAE8;
+  color: #33dae8;
   font-weight: 600;
 }
 
-.price, .time {
+.price,
+.time {
   display: flex;
   align-items: center;
   font-size: 0.9em;
 }
 
-.price svg, .time svg {
+.price svg,
+.time svg {
   margin-right: 5px;
 }
 
@@ -114,4 +129,32 @@ body {
 .author span {
   color: white;
   font-weight: 600;
+}
+@media (max-width: 375px) {
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .card-content h1 {
+    font-size: 1.2em;
+  }
+}
+.card-content p {
+  font-size: 0.9em;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    max-width: 400px; /* Adjust the width for a larger screen */
+    padding: 30px;
+  }
+
+  .card-content h1 {
+    font-size: 1.5em; /* Increase font size for desktop */
+  }
+
+  .card-content p {
+    font-size: 1em;
+  }
 }
